@@ -37,5 +37,9 @@ char	**ft_split(char const *s, char c); // Check ok / alloue et retourne un tab 
 char	*ft_itoa(int n);// Check ok / Transforme un int en chaine de char
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char)); // Check ok / applique la fonction f a chaque caractere d'une string
 void	ft_striteri(char *s, void (*f)(unsigned int, char *)); // Check ok / comme strmapi mais ne renvoi rien 
+void	ft_putchar_fd(char c, int fd); // Check ok / ecrit le char c sur le file descriptor donne (par exemple le terminal)
+void	ft_putstr_fd(char *s, int fd); // Check ok / ecrit une string sur un file descriptor donne
+void	ft_putendl_fd(char *s, int fd); // Check ok / comme putstr_fd mais rajoute \n a la fin
+void	ft_putnbr_fd(int n, int fd); // Check ok / ecrit un nombre dans une chaine de caractere sur un fd donne 
 
 #endif
