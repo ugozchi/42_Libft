@@ -32,6 +32,10 @@ void	*ft_calloc(size_t count, size_t size); // check ok / alloue de la memoire p
 char	*ft_strdup(const char *src); // check ok / duplique une chaine de char en la malloc qui peut etre free
 char	*ft_substr(char const *s, unsigned int start, size_t len); // CHECK KO, 2 versions / alloue et retourne une chaine de char issue de la chaine s, chaine commence a start et a pour taille len
 char	*ft_strjoin(char const *s1, char const *s2); // CHECK KO, non testé, necessite dun 2eme output ? / alloue et retourne une chaine de char resultant de s1 et s2
-char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strtrim(char const *s1, char const *set); //  CHECK KO, pas testé / alloue et retourne copie de chaine s1 sans char set au début et à la fin
+char	**ft_split(char const *s, char c); // Check ok / alloue et retourne un tab de chaine de char obtenue en separant s à l'aide de c
+char	*ft_itoa(int n);// Check ok / Transforme un int en chaine de char
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char)); // Check ok / applique la fonction f a chaque caractere d'une string
+void	ft_striteri(char *s, void (*f)(unsigned int, char *)); // Check ok / comme strmapi mais ne renvoi rien 
 
 #endif
