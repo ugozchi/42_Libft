@@ -18,7 +18,7 @@ void	ft_bzero(void *str, size_t n); // check ok / initialise zone memoire avec d
 void	*ft_memcpy(void *dest, const void *src, size_t n); // check ok / copie chaine de car de src vers dest avec longueur n
 void	*ft_memmove(void *dest, const void *src, size_t length); // check ok / copie sequence octets d'une zone mem src vers dest meme si chevauche
 size_t	ft_strlcpy(char *dest, const char *src, size_t size); // check ok / effectue une copie sécurisé d'une chaine de car et renvoie la longueur de la chaine copié 
-size_t	ft_strlcat(char *dest, const char *src, size_t size); // CHECK KO !!! / ajoute chaine de char src à la fin de dest avec un NULL
+size_t	ft_strlcat(char *dest, const char *src, size_t size); // CHECK KO !!!, fonction ne passe pas les tests / ajoute chaine de char src à la fin de dest avec un NULL
 int	ft_toupper(int c); // check ok / mets minuscule en majuscule
 int	ft_tolower(int c); // check ok / mets majuscule en minuscule
 char	*ft_strchr(const char *str, int c); // check ok / repere la 1er occurence de c dans str
@@ -30,5 +30,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len); // check
 int	ft_atoi(const char *nptr); // check ok / transforme chaine de char numerique en int
 void	*ft_calloc(size_t count, size_t size); // check ok / alloue de la memoire pour un tableau d'elements de taille specifie et init à 0. Retourne pointeur vers memoire alloue
 char	*ft_strdup(const char *src); // check ok / duplique une chaine de char en la malloc qui peut etre free
+char	*ft_substr(char const *s, unsigned int start, size_t len); // CHECK KO, 2 versions / alloue et retourne une chaine de char issue de la chaine s, chaine commence a start et a pour taille len
+char	*ft_strjoin(char const *s1, char const *s2); // CHECK KO, non testé, necessite dun 2eme output ? / alloue et retourne une chaine de char resultant de s1 et s2
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
