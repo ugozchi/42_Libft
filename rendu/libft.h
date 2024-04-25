@@ -48,7 +48,6 @@ void	ft_putchar_fd(char c, int fd); // Check ok / ecrit le char c sur le file de
 void	ft_putstr_fd(char *s, int fd); // Check ok / ecrit une string sur un file descriptor donne
 void	ft_putendl_fd(char *s, int fd); // Check ok / comme putstr_fd mais rajoute \n a la fin
 void	ft_putnbr_fd(int n, int fd); // Check ok / ecrit un nombre dans une chaine de caractere sur un fd donne
-
 t_list	*ft_lstnew(void *content); // Check ok / alloue et renvoie new element et initialise content avec le parametre et le reste à NULL
 void	ft_lstadd_front(t_list **alst, t_list *new); // Check ok / ajoute new au début de la list 
 int	ft_lstsize(t_list *lst); // Check ok / compte le nombre d'element de la liste
@@ -57,6 +56,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new); // Check ok / ajoute element new
 void	ft_lstdelone(t_list *lst, void (*del)(void *)); // Check ok / libere la memoire de l'element passe en argument 
 void	ft_lstclear(t_list **lst, void (*del)(void *)); // Check ok / Sup et libere la mem de l'element passe en parametre et de tous ceux qui suivent et pointeur initial a NULL
 void	ft_lstiter(t_list *lst, void (*f)(void *)); // Check ok / Itere sur la list et applique la fonction f au contenue de chaque element
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *)) // Check ok / comme lstiter mais crere une nouvelle lisre resultante des application succesives de f
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *)); // Check ok / comme lstiter mais crere une nouvelle lisre resultante des application succesives de f
 
 #endif

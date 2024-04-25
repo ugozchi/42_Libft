@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	*output_ptr = '\0';
 	return (output);
 }
-
+/*
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*s1;
@@ -48,3 +48,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(s1, &((char *)s)[start], s1_len + 1);
 	return (s1);
 }
+*/
