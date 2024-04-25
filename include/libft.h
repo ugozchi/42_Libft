@@ -7,6 +7,13 @@
 # define INT_MIN -2147483648
 # define INT_MAX 2147483647
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+	struct s_list	*prev;
+}					t_list;
+
 int	ft_isalpha(int c);	// check ok / regarde si c -> alpha
 int	ft_isdigit(int c);	// check ok / regarde si c -> [0-9]
 int	ft_isalnum(int c);	// check ok / regarde si c -> alpha ou num
@@ -40,6 +47,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *)); // Check ok / comme 
 void	ft_putchar_fd(char c, int fd); // Check ok / ecrit le char c sur le file descriptor donne (par exemple le terminal)
 void	ft_putstr_fd(char *s, int fd); // Check ok / ecrit une string sur un file descriptor donne
 void	ft_putendl_fd(char *s, int fd); // Check ok / comme putstr_fd mais rajoute \n a la fin
-void	ft_putnbr_fd(int n, int fd); // Check ok / ecrit un nombre dans une chaine de caractere sur un fd donne 
+void	ft_putnbr_fd(int n, int fd); // Check ok / ecrit un nombre dans une chaine de caractere sur un fd donne
 
 #endif
