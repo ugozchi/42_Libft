@@ -5,16 +5,17 @@
 # libft
 
 Ce projet a pour objectif de nous faire coder en C une librairie de fonctions usuelles que l'on pourra utiliser dans nos prochains projets.
-TLes seules fonctions externes autorisées sont `write()`, `malloc()` et `free()`. 
+Les seules fonctions externes autorisées sont `write()`, `malloc()` et `free()`. 
 Tu peux trouver le sujet [ici](fr.subject.pdf).
 
-# Downloading and compiling the library
+# Télécharge et compile la librairie
 
-Clone the library and use `make` to compile
+Clone la librairie
+Rends-toi dans le fichier `TEST` 
 ```
-git clone https://github.com/theozanchi/42_Berlin_libft/tree/main
-cd 42_Berlin_libft
-make
+git clone https://github.com/ugozchi/42_Libft.git
+cd 42_Libft
+cd TEST
 ```
 
 ![Compilation screenshot](.media/compilation_complete_screenshot.png)
