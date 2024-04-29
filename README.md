@@ -17,10 +17,10 @@ cd 42_Libft
 ```
 ## Options possibles
 
-``
+```
 |- *.
 |- TEST
-``
+```
 
 | Option | Description |
 | --- | --- |
