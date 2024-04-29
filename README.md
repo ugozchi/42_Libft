@@ -20,7 +20,7 @@ cd 42_Libft
 ``
 |- *.
 |- TEST
-`
+``
 
 | Option | Description |
 | --- | --- |
