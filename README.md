@@ -25,7 +25,7 @@ cd 42_Libft
 
 ## Options possibles ⚙️
 
-Vous avez deux parties dans ce git, la première partie représentée ci-dessous avec `* .` correspond à tous les fichiers présents mise à part le dossier `TEST`. Ici, vous pouvez utiliser les options classiques d'un Makefile (options ci-dessous) mais aussi l'option bonus qui vous permettra d'ajouter vos fonctions bonus dans votre fichier archive libft.a si vous les avez fait.
+Vous avez deux parties dans ce git, la première partie représentée ci-dessous avec `* .` correspond à tous les fichiers présents mise à part le dossier `TEST`. Ici, vous pouvez utiliser les options classiques d'un Makefile (options ci-dessous) mais aussi l'option bonus qui vous permettra d'ajouter vos fonctions bonus dans votre fichier archive libft.a si vous les avez fait.  
 Toute cette partie correspond à ce que l'on doit rendre pour ce faire corriger.
 L'autre partie `TEST` sert attention tenez-vous bien à tester votre projet 🎉.
 
@@ -51,7 +51,8 @@ L'autre partie `TEST` sert attention tenez-vous bien à tester votre projet 🎉
 ## Tests  📋
 
 Nous entrons donc dans la partie `TEST`. Vous retrouverez ici encore deux dossier, un dossier `libft` et un dossier libft-unit-test.
-Le dossier libft contient exactement les mêmes fichiers que l'on a représentés tout à l'heure par ce symbole `* .`. La seule différence est dans le Makefile qui lui va nous donner plus d'informations lorsque que l'on va utiliser les différentes options du Makefile. 
+Le dossier libft contient exactement les mêmes fichiers que l'on a représentés tout à l'heure par ce symbole `* .`.  
+La seule différence est dans le Makefile qui lui va nous donner plus d'informations lorsque que l'on va utiliser les différentes options du Makefile. 
 L'éxecution du Makefile montre que tous nos programmes compilent sans soucis, que les fichiers objets et le fichier archive se créer bien et que tout peut être supprimé proprement.
 
 <br>
@@ -60,7 +61,9 @@ L'éxecution du Makefile montre que tous nos programmes compilent sans soucis, q
 | --- |
 | <img src="./img/Compilation.png" /> |
 
-Une fois cela vérifier, nous pouvons tester notre projet à l'aide de [/libft-unit-test](https://github.com/alelievr/libft-unit-test).
+<br>
+
+Une fois cela vérifier, nous pouvons tester notre projet à l'aide de [/libft-unit-test](https://github.com/alelievr/libft-unit-test).  
 Voici les résultats :
 
 <br>
