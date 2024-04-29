@@ -63,10 +63,11 @@ L'éxecution du Makefile montre que tous nos programmes compilent sans soucis, q
 
 <br>
 
-Une fois cela vérifier, nous pouvons tester notre projet à l'aide de [/libft-unit-test](https://github.com/alelievr/libft-unit-test).  
-Voici les résultats :
+Une fois cela vérifier, nous pouvons tester notre projet à l'aide de [/libft-unit-test](https://github.com/alelievr/libft-unit-test).
 
 <br>
+
+Voici les résultats :
 
 ### Première partie
 
