@@ -1,43 +1,23 @@
 #include "libft.h"
 
-static	char	is_set(char c,	char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (c == s[i])
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	j;
-	int	s1_len;
-	int	s2_len;
-	char	*s2;
+	char	*trimmed;
+	size_t	start;
+	size_t	end;
 
-	s1_len = ft_strlen(s1);
-	i = 0;
-	j = s1_len;
-	if (!s1)
-		return (0);
-	while (is_set(s1[i], (char *)set))
-		i++;
-	while (is_set(s1[--j], (char *)set))
-		if (j == 0)
-			break ;
-	s2_len = (s1_len - i) - (s1_len - j) + 2;
-	if (s2_len < 1)
-		s2_len = 1;
-	s2 = ft_calloc(s2_len, sizeof(char));
-	if (!s2)
-		return (0);
-	ft_strlcpy(s2, (char *)&s1[i], s2_len);
-	return (s2);
+	if (!s1 || !set)
+		return (NULL);
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	if (start == end + 1)
+		return (ft_strdup(""));
+	while (ft_strchr(set, s1[end]))
+		end--;
+	trimmed = ft_substr(s1, start, end - start + 1);
+	if (!trimmed)
+		return (NULL);
+	return (trimmed);
 }
