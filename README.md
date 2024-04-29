@@ -8,21 +8,25 @@ Ce projet a pour objectif de nous faire coder en C une librairie de fonctions us
 Les seules fonctions externes autorisées sont `write()`, `malloc()` et `free()`. 
 Tu peux trouver le sujet [ici](fr.subject.pdf).
 
-### Télécharge et compile la librairie
+## Télécharge et compile la librairie
 
-Clone la librairie puis rends-toi dans le fichier `TEST`. 
+Clone la librairie.
 ```
 git clone https://github.com/ugozchi/42_Libft.git
 cd 42_Libft
-cd TEST
 ```
-### Options possibles
+## Options possibles
+
+``
+|- *.
+|- TEST
+`
 
 | Option | Description |
 | --- | --- |
-| `make` | Compte, le nombre de fichier puis les compiles avant de créer une libft.a avec tous les fichiers |
+| `make` | Compte, le nombre de fichier puis les compiles avant de créer un fichier archive libft.a avec tous les fichiers |
 | `make clean` | Supprime le dossier contenant les fichiers objets |
 | `make fclean` | Execute `clean` puis supprime le fichier archive |
 | `make re` | Execute `fclean` puis `make` |
 
-![Compilation screenshot](.media/compilation_complete_screenshot.png)
+![Compilation screenshot](img/Compilation.png)
