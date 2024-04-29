@@ -67,6 +67,8 @@ Voici les résultats :
 
 ### Première partie
 
+<br>
+
 | |
 | --- |
 | <img src="./img/Test_first_part.png" /> |
@@ -74,6 +76,8 @@ Voici les résultats :
 <br>
 
 ### Deuxième partie
+
+<br>
 
 | |
 | --- |
@@ -83,6 +87,8 @@ Voici les résultats :
 
 ### Partie Bonus
 
+<br>
+
 | |
 | --- |
 | <img src="./img/Test_bonus_part.png" /> |
@@ -91,7 +97,7 @@ Voici les résultats :
 
 ## Note Final et Commentaires 📔
 
----
+<br>
 
 | |
 | --- |
