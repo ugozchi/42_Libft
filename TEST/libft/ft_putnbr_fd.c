@@ -4,6 +4,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	long	nb;
 
+	nb = n;
 	if (fd >= 0)
 	{
 		if (nb < 0)

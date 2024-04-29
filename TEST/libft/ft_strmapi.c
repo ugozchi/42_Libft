@@ -6,9 +6,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*output;
 	size_t	index;
 
+	if (!s || !f)
+		return (NULL);
 	length = ft_strlen(s);
 	output = malloc((length + 1) * sizeof(char));
-	if (output == NULL)
+	if (!output)
 		return (NULL);
 	index = 0;
 	while (index < length)
