@@ -23,8 +23,8 @@ cd 42_Libft
 
 Vous avez deux parties dans ce git, la première partie représentée ci-dessous avec `* .` correspond à tous les fichiers présents mise à part le dossier `TEST`. Ici, vous pouvez utiliser les options classiques d'un Makefile (options ci-dessous) mais aussi l'option bonus qui vous permettra d'ajouter vos fonctions bonus dans votre fichier archive libft.a si vous les avez fait.
 Toute cette partie correspond à ce que l'on doit rendre pour ce faire corriger.
-L'autre partie `TEST` sert attention tenez-vous bien à tester votre projet 🎉.
-<br>
+L'autre partie `TEST` sert attention tenez-vous bien à tester votre projet 🎉.  
+
 ```
 |- *.
 |- TEST
