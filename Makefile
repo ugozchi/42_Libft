@@ -82,7 +82,7 @@ OBJS = ${addsuffix .o, ${SRC}}
 BONUS_SRCS = ${addsuffix .c, ${BONUS_SRC}}
 BONUS_OBJS = ${addsuffix .o, ${BONUS_SRC}}
 
-.c.o: ${SRCS} ${BONUS_SRCS}
+.c.o: 
 	${CC} ${CFLAGS} -c -o $@ $<
 
 $(NAME): ${OBJS}
