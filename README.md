@@ -46,6 +46,8 @@ L'autre partie `TEST` sert attention tenez-vous bien à tester votre projet 🎉
 | `make re` | Execute `fclean` puis `make` |
 | 'make bonus` | Execute make puis rajoute les programmes bonus dans votre fichier archive |
 
+<br>
+
 ## Tests  📋
 
 Nous entrons donc dans la partie `TEST`. Vous retrouverez ici encore deux dossier, un dossier `libft` et un dossier libft-unit-test.
@@ -61,11 +63,15 @@ L'éxecution du Makefile montre que tous nos programmes compilent sans soucis, q
 Une fois cela vérifier, nous pouvons tester notre projet à l'aide de [/libft-unit-test](https://github.com/alelievr/libft-unit-test).
 Voici les résultats :
 
+<br>
+
 ### Première partie
 
 | |
 | --- |
 | <img src="./img/Test_first_part.png" /> |
+
+<br>
 
 ### Deuxième partie
 
@@ -73,8 +79,29 @@ Voici les résultats :
 | --- |
 | <img src="./img/Test_2nd_part.png" /> |
 
+<br>
+
 ### Partie Bonus
 
 | |
 | --- |
 | <img src="./img/Test_bonus_part.png" /> |
+
+<br>
+
+## Note Final et Commentaires 📔
+
+---
+
+| |
+| --- |
+| ![](./img/note2.png) |
+
+
+| | |
+| --- | --- |
+| Moulinette | ![](./img/note1.png) |
+| Correcteur 1 | <img src="./img/correction1.png" /> |
+| Correcteur 2 | <img src="./img/correction2.png" /> |
+| Correcteur 3 | <img src="./img/correction3.png" /> |
+
