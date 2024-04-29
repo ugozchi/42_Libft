@@ -10,8 +10,7 @@ Tu peux trouver le sujet [ici](fr.subject.pdf).
 
 ### Télécharge et compile la librairie
 
-Clone la librairie.\n
-Rends-toi dans le fichier `TEST`. 
+Clone la librairie puis rends-toi dans le fichier `TEST`. 
 ```
 git clone https://github.com/ugozchi/42_Libft.git
 cd 42_Libft
@@ -21,23 +20,9 @@ cd TEST
 
 | Option | Description |
 | --- | --- |
-| `-h`<br />`--help` | Display help and exit |
-| `-d` | Allows to perform the tests even if the files are in directories |
-| `-c` | Disable color |
-| `-s` | Disable searching Makefile and author files |
-| `-m` | When compiling library, test all the Makefile's rules (instead of doing only make re and checking if other rules exist). |
-| `-l` | Disable compiling library |
-| `-f` | Disable checking forbidden functions |
-| `-n` | Disable norminette |
-| `-u` | Disable checking updates at launch |
-| `-p1` | Disable part 1 tests |
-| `-p2` | Disable part 2 tests |
-| `-b`| Disable bonus part tests |
-| `-a` | Disable additional part tests |
-| `-op1`| Do only part 1 tests |
-| `-op2`| Do only part 2 tests |
-| `-ob` | Do only bonus part tests |
-| `-oa` | Do only additional part tests |
-| `ft_function` | Test only this function |
+| `make` | Compte, le nombre de fichier puis les compiles avant de créer une libft.a avec tous les fichiers |
+| `make clean` | Supprime le dossier contenant les fichiers objets |
+| `make fclean` | Execute `clean` puis supprime le fichier archive |
+| `make re` | Execute `fclean` puis `make` |
 
 ![Compilation screenshot](.media/compilation_complete_screenshot.png)
