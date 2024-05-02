@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/02 12:28:52 by uzanchi           #+#    #+#             */
+/*   Updated: 2024/05/02 12:30:55 by uzanchi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
@@ -10,4 +22,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	if (n < 1)
 		return (0);
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-} 
+}

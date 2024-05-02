@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/02 12:41:07 by uzanchi           #+#    #+#             */
+/*   Updated: 2024/05/02 12:41:48 by uzanchi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t	get_number_length(int n)
@@ -45,6 +57,6 @@ char	*ft_itoa(int n)
 int	main(int ac, char **av)
 {
 	printf("%s\n", ft_itoa(atoi(av[1])));
-	printf("Correct car on utilise %%s pour afficher le nombre qui n'en est d'ailleurs plus un :)\n");
+	printf("Correct car on utilise %%s pour afficher le nombre :)\n");
 }
 */
