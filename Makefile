@@ -82,7 +82,7 @@ BONUS_SRCS	=	ft_lstnew.c \
 
 BONUS_OBJS	=	${BONUS_SRCS:.c=.o}
 
-all:		${NAME} bonus
+all:		${NAME}
 
 ${NAME}:	${OBJS}
 			${AR} ${NAME} ${OBJS}
