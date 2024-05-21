@@ -2,18 +2,18 @@
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Werror -Wextra -g3
-RM = rm -rf
+RM = rm -f
 AR = ar rcs
 
 # Colors (When you change colors or styles using echo, you need to RESET the parameters at the end of the sentence.)
 RESET	=	\033[0m
 BLACK	=	\033[0;30m
-RED	=	\033[0;31m
-GREEN	=	\033[1;32m
-YELLOW	=	\033[1;33m
+RED	=	\033[1;31m
+GREEN	=	\033[0;32m
+YELLOW	=	\033[0;33m
 BLUE	=	\033[0;34m
-PURPLE	=	\033[1;35m
-CYAN	=	\033[1;36m
+PURPLE	=	\033[0;35m
+CYAN	=	\033[0;36m
 WHITE	=	\033[0;37m
 
 # Styles (To change a style, you have to change the "0" after the open square bracket "[" in "Colors" to the following numbers.)
@@ -66,8 +66,11 @@ SRCS		=	ft_isalpha.c \
 				ft_putchar_fd.c \
 				ft_putstr_fd.c \
 				ft_putendl_fd.c \
-				ft_putnbr_fd.c \
-				ft_lstnew.c \
+				ft_putnbr_fd.c
+
+OBJS		=	${SRCS:.c=.o}
+
+BONUS_SRCS	=	ft_lstnew.c \
 				ft_lstadd_front.c \
 				ft_lstsize.c \
 				ft_lstlast.c \
@@ -75,60 +78,31 @@ SRCS		=	ft_isalpha.c \
 				ft_lstdelone.c \
 				ft_lstclear.c \
 				ft_lstiter.c \
-				ft_lstmap.c \
+				ft_lstmap.c
 
-SRC_COUNT	=	${words ${SRCS}}
+BONUS_OBJS	=	${BONUS_SRCS:.c=.o}
 
-OBJS		=	$(addprefix ${OBJ_DIR}/, $(notdir $(SRCS:.c=.o)))
-OBJ_DIR		=	.o
+all:		${NAME}
 
-all:			${OBJ_DIR} ${NAME}
-
-${NAME}:		entry_message ${OBJS}
-				@if [ -e ${NAME} ] && [ "$(shell find ${OBJ_DIR} -newer ${NAME} 2>/dev/null)" = "" ]; then \
-					echo "${YELLOW}${INFO} Nothing to do !${RESET}"; \
-				else \
-					echo "${GREEN} DONE${RESET}"; \
-					${AR} ${NAME} ${OBJS} && echo "${CYAN}Creating ${NAME} archive file${RESET}"; \
-					echo "${PURPLE}${NAME} created${RESET}"; \
-				fi
-
-${OBJ_DIR}:
-				@if [ ! -d "${OBJ_DIR}" ]; \
-				then mkdir -p "${OBJ_DIR}"; \
-				fi
-
-${OBJ_DIR}/%.o: %.c
-				@printf "${GREEN}"
-				@printf "%s" "${OK}"
-				@printf "${NC}"
-				@${CC} ${CFLAGS} -c $< -o $@
-# so: is here for the libft-unit-test
+${NAME}:	${OBJS}
+			${AR} ${NAME} ${OBJS}
+			
 so:
-	${CC} -nostartfiles -fPIC ${CFLAGS} ${SRCS}
-	gcc -nostartfiles -shared -o libft.so ${OBJS}
-        
+	$(CC) -fPIC $(CFLAGS) $(SRC)
+	gcc -shared -o libft.so $(OBJ)
+
+.c.o:
+			${CC} ${CFLAGS} -c $< -o $@
+
 clean:
-			@if [ ! -d "${OBJ_DIR}" ]; \
-			then \
-				echo "${YELLOW}${INFO} Repo .o already clean${RESET}"; \
-			else \
-				echo "${RED}Removing all .o files${RESET}"; \
-				${RM} ${OBJ_DIR}; \
-			fi
+			${RM} ${OBJS} ${BONUS_OBJS}
 
-fclean:			clean
-			@if [ ! -f "${NAME}" ]; \
-			then \
-				echo "${YELLOW}${INFO} Archive file already clean${RESET}"; \
-			else \
-				echo "${RED}Removing archive files${RESET}"; \
-				${RM} ${NAME}; \
-			fi
+fclean:		clean
+			${RM} ${NAME}
 
-re:				fclean all
+bonus:		${BONUS_OBJS}
+			ar rcs ${NAME} ${BONUS_OBJS}
 
-entry_message:
-				@echo "${YELLOW}${INFO} ${SRC_COUNT} files of the library:\n${GREEN}Compilation :${RESET}"
+re:			fclean all
 
-.PHONY:			all clean fclean re entry_message
+.PHONY:		all clean fclean re bonus
