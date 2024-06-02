@@ -6,20 +6,21 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 12:43:20 by uzanchi           #+#    #+#             */
-/*   Updated: 2024/06/02 17:06:45 by uzanchi          ###   ########.fr       */
+/*   Updated: 2024/06/02 17:11:27 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-/*
-Library
-*/
+/*Library*/
+
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdlib.h>
 # include <stdarg.h>
+
+/*Define for Ft_Printf*/
 
 # define DEC_BASE "0123456789"
 # define HEX_BASE_LOW "0123456789abcdef"
@@ -28,12 +29,16 @@ Library
 # define NULL_DISPLAY "(null)"
 # define NIL_DISPLAY "(nil)"
 
+/*Definition of structure for Libft_bonus*/
+
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 	struct s_list	*prev;
 }					t_list;
+
+/*Libft main part*/
 
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
@@ -69,6 +74,9 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+
+/*Libft Bonus Part*/
+
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **alst, t_list *new);
 int				ft_lstsize(t_list *lst);
@@ -79,9 +87,8 @@ void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
-/*
-Ft_Printf function and utils
-*/
+/*Ft_Printf function and utils*/
+
 int				ft_printf(const char *str, ...);
 size_t			putchar_count(int c);
 size_t			putstr_count(char *str);
