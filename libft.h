@@ -6,15 +6,27 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 12:43:20 by uzanchi           #+#    #+#             */
-/*   Updated: 2024/05/28 12:33:11 by uzanchi          ###   ########.fr       */
+/*   Updated: 2024/06/02 17:06:45 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+/*
+Library
+*/
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdlib.h>
+# include <stdarg.h>
+
+# define DEC_BASE "0123456789"
+# define HEX_BASE_LOW "0123456789abcdef"
+# define HEX_BASE_HIGH "0123456789ABCDEF"
+# define POINTER_PREFIX "0x"
+# define NULL_DISPLAY "(null)"
+# define NIL_DISPLAY "(nil)"
 
 typedef struct s_list
 {
@@ -67,5 +79,15 @@ void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
+/*
+Ft_Printf function and utils
+*/
+int				ft_printf(const char *str, ...);
+size_t			putchar_count(int c);
+size_t			putstr_count(char *str);
+size_t			putnbr_base10_count(int nbr, char *base);
+size_t			put_u_base10_count(unsigned int nbr, char *base);
+size_t			putptr_base_count(void *ptr, char *base, int first_loop_flag);
+size_t			ft_strlen(const char *str);
 
 #endif
