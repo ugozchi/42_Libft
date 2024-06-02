@@ -42,7 +42,7 @@ L'autre partie `TEST` sert attention tenez-vous bien à tester votre projet 🎉
 <br>
 
 ## Fonction disponible 🧾
-
+- [libft](#libft)
 	- [Fonctions mémoire](#fonctions-m%C3%A9moire)
 	- [Fonctions chaînes de caractères](#fonctions-cha%C3%AEnes-de-caract%C3%A8res)
 	- [Fonctions caractères](#fonctions-caract%C3%A8res)
