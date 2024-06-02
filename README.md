@@ -135,9 +135,9 @@ Fonctions | Prototype | Description
 
 Fonctions | Prototype | Retour
 Description
---- | ---- | ---------------------
-----------------------------------
-[ft_open_fd](ft_open_fd.c) | `int	ft_open_fd(char *path, int oflag, int perm);` | retour 0
+|--- | ---- | ---------------------|
+|----------------------------------|
+[ft_open_fd](ft_open_fd.c) | `int	ft_open_fd(char *path, int oflag, int perm);` | retour 0 |
 Ouvre un fichier et attribue un file descriptor. Renvoie 1 en cas de succès, sinon -1 en cas d'erreur.
 
 ## Tests  📋
