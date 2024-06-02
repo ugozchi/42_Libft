@@ -42,7 +42,7 @@ L'autre partie `TEST` sert attention tenez-vous bien à tester votre projet 🎉
 <br>
 
 ## Fonction disponible 🧾
-- [libft](#libft)
+- [Libft](#Libft)
 	- [Fonctions mémoire](#fonctions-m%C3%A9moire)
 	- [Fonctions chaînes de caractères](#fonctions-cha%C3%AEnes-de-caract%C3%A8res)
 	- [Fonctions caractères](#fonctions-caract%C3%A8res)
@@ -68,42 +68,17 @@ Fonctions | Prototype | Description
 --- | ---- | ---------------------
 [ft_strlen](ft_strlen.c) | `size_t	ft_strlen(const char *str);` | (cf. man) Calcule la longueur de la chaîne de caractères s, sans compter l'octet nul '\0' final.
 [ft_strdup](ft_strdup.c) | `char	*ft_strdup(const char *s);` | (cf. man) Renvoie un pointeur sur une nouvelle chaîne de caractères qui est dupliquée depuis s.
-
-
-[ft_strncpy](ft_strncpy.c) | `char	*ft_strncpy(char *dest, const char *src, size_t len);` | (cf. man) Identique à strcpy sauf que seuls les n premiers octets de src sont copiés. Avertissement : s'il n'y a pas de '/0' dans les n premiers octets de src, dest n'en aura pas non plus.
-ICI ON VEUT MODIFIER AVEC STRLCPY !!!
-
-
+[ft_strncpy](ft_strncpy.c) | `char	*ft_strncpy(char *dest, const char *src, size_t size);` | (cf. man) Identique à strcpy sauf que seuls les n premiers octets de src sont copiés. Avertissement : s'il n'y a pas de '/0' dans les n premiers octets de src, dest n'en aura pas non plus.
 [ft_strlcat](ft_strlcat.c) | `size_t	ft_strlcat(char *dst, const char *src, size_t size);` | (cf. man) Concatène les deux chaînes et retourne la longueur totale de la chaîne qu'elle essaye de créer. Cela signifie la taille initiale de dst plus la longueur de src.
 [ft_strchr](ft_strchr.c) | `char	*ft_strchr(const char *s, int c);` | (cf. man) Renvoie un pointeur sur la première occurrence du caractère c dans la chaîne s (ou NULL si non trouvé).
-
 [ft_strrchr](ft_strrchr.c) | `char	*ft_strrchr(const crar *s, int c);` | (cf. man) Renvoie un pointeur sur la dernière occurrence du caractère c dans la chaîne s (ou NULL si non trouvé).
-
-
 [ft_strnstr](ft_strnstr.c) | `char	*ft_strnstr(const char *hstack, const char *ndle, size_t n);` | (cf. man) Cherche la première occurrence de la sous-chaîne needle au sein des n premiers caractères de la chaîne haystack.
-
-
-
 [ft_strncmp](ft_strncmp.c) | `int	ft_strncmp(const char *s1, const char *s2, size_t n);`| (cf. man) Identique à strcmp en ne comparant que les n (au plus) premiers caractères de s1 et s2.
-
-
-
 [ft_striteri](ft_striteri.c) | `void	ft_striteri(char *s, void (*f)(unsigned int, char *));` | Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre en precisant son index en premier argument. Chaque caractere est passe par adresse a la fonction f afin de pouvoir etre modifie si necessaire.
-
-
 [ft_strmapi](ft_strmapi.c) | `char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));` | Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre en precisant son index pour creer une nouvelle chaine “fraiche” avec malloc(3) resultant des applications successives de f.
-
-
-
-[ft_strjoin](ft_strjoin.c) | `char	*ft_strjoin(char const *s1, char const *s2);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee pas un '\0' resultant de la concatenation de s1 de s2. Si l'allocation echoue, la fonction renvoie NULL.
-
-
+[ft_strjoin](ft_strjoin.c) | `char	*ft_strjoin(char const *s1, char const *s2);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee pas un '\0' resultant de la concatenation de s1 de s2. Si l'allocation echoue, la fonction renvoie NULL.*
 [ft_strtrim](ft_strtrim.c) | `char	*ft_strtrim(char const *s);` | Alloue avec malloc(3) et retourne une copie de la chaine passee en parametre sans les espaces blancs au debut et a la fin de cette chaine. On considere comme des espaces blancs les caracteres ' ', '\n' et '\t'. Si s ne contient pas d'espaces blancs au debut ou a la fin, la fonction renvoie une copie de s. Si l'allocation echoue, la fonction renvoie NULL.
-
-
-[ft_strsplit](ft_strsplit.c) | `char	**ft_strsplit(char const *s, char c);` | Alloue avec malloc(3) et retourne un tableau de chaînes de caracteres "fraiches", résultant de la découpe de "s" selon le caractère 'c'. Le tableau et toutes les chaînes sont terminées par '\0'. Si l'allocation échoue, la fonction retourne NULL.
-MODIFE FT_SPLIT !!!
-
+[ft_split](ft_strsplit.c) | `char	**ft_strsplit(char const *s, char c);` | Alloue avec malloc(3) et retourne un tableau de chaînes de caracteres "fraiches", résultant de la découpe de "s" selon le caractère 'c'. Le tableau et toutes les chaînes sont terminées par '\0'. Si l'allocation échoue, la fonction retourne NULL.
 [get_next_line](get_next_line.c) | `int		get_next_line(int fd, char **line);` | La fonction GNL lit une ligne dans le file descriptor fd et complète la chaîne de caractères *line avec le résultat de la lecture (sans '\n' le cas échéant).
 *"* | *"* | Une fin de lecture est définie par un '\n' ou un EOF (End Of File).
 *"* | *"* | La fonction retourne 1 lorsqu'une ligne est lue ; 0 lorsque la lecture est terminée ; et -1 en cas d'erreur.
@@ -125,16 +100,8 @@ Fonctions | Prototype | Description
 Fonctions | Prototype | Description
 --- | -------- | ------------------
 [ft_atoi](ft_atoi.c) | `int	ft_atoi(const char *str)` | (cf. man) Convertit une chaîne en entier.
-[ft_atoi_base](ft_atoi_base.c) | `int	ft_atoi_base(const char *str, int str_base)` | Convertit une chaîne de la base définie en entier de base 10.
 [ft_itoa](ft_itoa.c) | `char	*ft_itoa(int n);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee par un '\0' representatnt l'entier n passe en parametre. Les nombres negatifs sont geres. Si l'allocation echoue, la fonction renvoie NULL.
-[ft_itoa_base](ft_itoa_base.c) | `char	*ft_itoa(intmax_t n, int base);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee par un '\0' representatnt l'entier n passe en parametre converti selon la base donnée. Les nombres negatifs sont geres. Si l'allocation echoue, la fonction renvoie NULL.
-[ft_uitoa_base](ft_itoa_base.c) | `char	*ft_itoa(uintmax_t n, int base);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee par un '\0' representatnt l'entier n passe en parametre converti selon la base donnée. Les nombres negatifs sont geres. Si l'allocation echoue, la fonction renvoie NULL.
 [ft_abs](ft_abs.c) |  `int	ft_abs(int n);` | Prend en paramètre un int et renvoie sa valeur absolue.
-[ft_intlen](ft_intlen.c) | `int	ft_intlen(int n);` | Prend en paramètre un int et renvoie le nombre de caractères qui composent le nombre. En cas de valeur négative, le signe '-' est compté comme un caractère.
-[ft_power](ft_power.c) | `int	ft_power(int nb, int power);` | Fonction puissance.
-[ft_sqrt](ft_sqrt.c) | `int	ft_sqrt(int nb);` | Fonction racine carrée (square root). Si la racine carrée n'est pas entière, la fonction renvoie 0.
-[ft_int_sqrt](ft_int_sqrt.c) | `int	ft_int_sqrt(int nb);` | Fonction racine carrée (square root). Renvoie l'entier inférieur de la racine carrée.
-[ft_bitlen](ft_bitlen.c) | `int	ft_bitlen(unsigned int n);` | Compte le nombre de bits d'un nombre entier.
 
 
 ### Fonctions listes chaînées
