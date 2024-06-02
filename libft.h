@@ -6,7 +6,7 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 12:43:20 by uzanchi           #+#    #+#             */
-/*   Updated: 2024/06/02 17:11:27 by uzanchi          ###   ########.fr       */
+/*   Updated: 2024/06/02 17:15:22 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 
 /*Library*/
 
+# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdlib.h>
 # include <stdarg.h>
+# include <limits.h>
 
 /*Define for Ft_Printf*/
 
@@ -28,6 +29,16 @@
 # define POINTER_PREFIX "0x"
 # define NULL_DISPLAY "(null)"
 # define NIL_DISPLAY "(nil)"
+
+/*Define buffer and fd for Get_Next_line*/
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
+
+# ifndef FD_MAX
+#  define FD_MAX 1024
+# endif
 
 /*Definition of structure for Libft_bonus*/
 
