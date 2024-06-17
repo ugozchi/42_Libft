@@ -6,11 +6,11 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 16:04:09 by uzanchi           #+#    #+#             */
-/*   Updated: 2024/05/31 12:10:50 by uzanchi          ###   ########.fr       */
+/*   Updated: 2024/06/05 15:04:38 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 static size_t	display_data(char specifier, va_list args)
 {
@@ -40,20 +40,24 @@ int	ft_printf(const char *str, ...)
 {
 	va_list	args;
 	size_t	printed_count;
+	size_t	i;
 
+	i = 0;
 	if (!str)
 		return (-1);
 	va_start(args, str);
 	printed_count = 0;
-	while (*str)
+	while (str[i])
 	{
-		if (*str == '%')
+		if (str[i] == '%' && str[i + 1] == '\0')
+			return (-1);
+		if (str[i] == '%')
 		{
-			printed_count += display_data(*++str, args);
-			str++;
+			printed_count += display_data(str[++i], args);
+			i++;
 		}
 		else
-			printed_count += putchar_count(*str++);
+			printed_count += putchar_count(str[i++]);
 	}
 	va_end(args);
 	return (printed_count);
