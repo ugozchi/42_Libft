@@ -20,6 +20,7 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include <limits.h>
+# include <stdbool.h>
 
 /*Define for Ft_Printf*/
 
