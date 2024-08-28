@@ -6,11 +6,11 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 16:04:09 by uzanchi           #+#    #+#             */
-/*   Updated: 2024/08/28 11:04:11 by uzanchi          ###   ########.fr       */
+/*   Updated: 2024/08/28 11:09:57 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static size_t	display_data(char specifier, va_list args)
 {
