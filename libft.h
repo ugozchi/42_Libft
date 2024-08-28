@@ -6,7 +6,7 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 12:43:20 by uzanchi           #+#    #+#             */
-/*   Updated: 2024/06/02 17:17:01 by uzanchi          ###   ########.fr       */
+/*   Updated: 2024/08/28 11:24:26 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 /*Ft_Printf function and utils*/
 
 int				ft_printf(const char *str, ...);
+int				ft_printf_colour(char *colour, const char *str, ...);
 size_t			putchar_count(int c);
 size_t			putstr_count(char *str);
 size_t			putnbr_base10_count(int nbr, char *base);
