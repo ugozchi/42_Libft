@@ -6,7 +6,7 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 11:34:04 by uzanchi           #+#    #+#             */
-/*   Updated: 2024/08/28 11:36:30 by uzanchi          ###   ########.fr       */
+/*   Updated: 2024/08/28 11:39:10 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_isnumeric(char *str)
 		str++;
 	while (*str)
 	{
-		if (!ft_isdigit(*str)
+		if (!ft_isdigit(*str))
 			return (0);
 		str++;
 	}
