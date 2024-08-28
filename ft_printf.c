@@ -6,7 +6,7 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 16:04:09 by uzanchi           #+#    #+#             */
-/*   Updated: 2024/08/28 11:13:50 by uzanchi          ###   ########.fr       */
+/*   Updated: 2024/08/28 11:16:20 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int	ft_printf(const char *str, ...)
 }
 
 /*You need to define the colors in the .h files of your project to use this function*/
-int	ft_printf_color(char *color, const char *str, ...)
+int	ft_printf_color(char *colour, const char *str, ...)
 {
 	va_list	args;
 	size_t	printed_count;
@@ -75,7 +75,7 @@ int	ft_printf_color(char *color, const char *str, ...)
 		return (-1);
 	va_start(args, str);
 	printed_count = 0;
-	putstr_count(color);
+	putstr_count(colour);
 	while (str[i])
 	{
 		if (str[i] == '%' && str[i + 1] == '\0')
