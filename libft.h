@@ -6,7 +6,7 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 12:43:20 by uzanchi           #+#    #+#             */
-/*   Updated: 2025/04/26 19:02:53 by uzanchi          ###   ########.fr       */
+/*   Updated: 2025/04/26 19:07:54 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,6 +153,8 @@ size_t					ft_strlcpy(char *dest, const char *src, size_t size);
 char					*ft_strmapi(char const *s, char (*f)(unsigned int,
 								char));
 char					*ft_strncpy(char *dest, const char *src, size_t n);
+int						handle_special_case(const char *nptr, char **endptr,
+							double *result);
 double					ft_strtod(const char *nptr, char **endptr);
 char					*ft_strtrim(char const *s1, char const *set);
 char					*ft_substr(char const *s, unsigned int start,
