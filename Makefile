@@ -79,6 +79,7 @@ SRCS		=	Char/Analysis/ft_isalnum.c \
 				String/Manipulation/ft_concate.c \
 				String/Manipulation/ft_print_data.c \
 				String/Manipulation/ft_printf.c \
+				String/Manipulation/ft_split_whitespace.c \
 				String/Manipulation/ft_split.c \
 				String/Manipulation/ft_strdup.c \
 				String/Manipulation/ft_striteri.c \

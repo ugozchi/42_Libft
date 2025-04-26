@@ -6,7 +6,7 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 12:43:20 by uzanchi           #+#    #+#             */
-/*   Updated: 2025/04/26 18:27:35 by uzanchi          ###   ########.fr       */
+/*   Updated: 2025/04/26 18:34:29 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,6 +141,7 @@ size_t					putnbr_base10_count(int nbr, char *base);
 size_t					put_u_base10_count(unsigned int nbr, char *base);
 size_t					putptr_base_count(void *ptr, char *base,
 							int first_loop_flag);
+char					**ft_split_whitespace(const char *str);
 char					**ft_split(char const *s, char c);
 char					*ft_strdup(const char *src);
 void					ft_striteri(char *s, void (*f)(unsigned int, char *));
