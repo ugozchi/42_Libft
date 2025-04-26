@@ -39,6 +39,7 @@ SRCS		=	Char/Analysis/ft_isalnum.c \
 				Char/Analysis/ft_isdigit.c \
 				Char/Analysis/ft_isprint.c \
 				Char/Analysis/ft_isspace.c \
+				Char/Analysis/ft_isupper.c \
 				Char/Manipulation/ft_tolower.c \
 				Char/Manipulation/ft_toupper.c \
 				Conversion/ft_atoi.c \

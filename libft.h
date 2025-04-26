@@ -6,7 +6,7 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 12:43:20 by uzanchi           #+#    #+#             */
-/*   Updated: 2025/04/26 19:07:54 by uzanchi          ###   ########.fr       */
+/*   Updated: 2025/04/26 19:34:20 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ int						ft_isdigit(int c);
 int						ft_isnumeric(char *str);
 int						ft_isprint(int c);
 int						ft_isspace(int c);
+int						ft_isupper(int c);
 
 /*  Manipulation  */
 int						ft_toupper(int c);
