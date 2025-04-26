@@ -6,7 +6,7 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 12:43:20 by uzanchi           #+#    #+#             */
-/*   Updated: 2025/04/26 19:34:20 by uzanchi          ###   ########.fr       */
+/*   Updated: 2025/04/26 19:39:43 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,6 +157,7 @@ char					*ft_strncpy(char *dest, const char *src, size_t n);
 int						handle_special_case(const char *nptr, char **endptr,
 							double *result);
 double					ft_strtod(const char *nptr, char **endptr);
+char					*ft_strtok(char *str, const char *delim);
 char					*ft_strtrim(char const *s1, char const *set);
 char					*ft_substr(char const *s, unsigned int start,
 							size_t len);
