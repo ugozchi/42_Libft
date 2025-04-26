@@ -6,17 +6,18 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 12:37:53 by uzanchi           #+#    #+#             */
-/*   Updated: 2024/11/18 12:19:24 by uzanchi          ###   ########.fr       */
+/*   Updated: 2025/04/26 18:18:53 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-t_list_bonus	*ft_lstmap(t_list_bonus *lst, void *(*f)(void *), void (*del)(void *))
+t_list_bonus	*ft_lstmap(t_list_bonus *lst, void *(*f)(void *),
+							void (*del)(void *))
 {
 	t_list_bonus	*new_lst;
 	t_list_bonus	*node;
-	void	*mapped_content;
+	void			*mapped_content;
 
 	if (!lst || !f || !del)
 		return (NULL);

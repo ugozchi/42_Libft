@@ -6,18 +6,18 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:21:37 by uzanchi           #+#    #+#             */
-/*   Updated: 2024/11/18 12:22:06 by uzanchi          ###   ########.fr       */
+/*   Updated: 2025/04/26 18:17:10 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-int        ft_is_just_space(char *str)
+int	ft_is_just_space(char *str)
 {
-    while (*str)
-    {
-        if (!ft_isspace(*str++))
-            return (0);
-    }
-    return (1);
+	while (*str)
+	{
+		if (!ft_isspace(*str++))
+			return (0);
+	}
+	return (1);
 }
