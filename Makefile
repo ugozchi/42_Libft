@@ -91,6 +91,7 @@ SRCS		=	Char/Analysis/ft_isalnum.c \
 				String/Manipulation/ft_strncpy.c \
 				String/Manipulation/ft_strtod_utils.c \
 				String/Manipulation/ft_strtod.c \
+				String/Manipulation/ft_strtok.c \
 				String/Manipulation/ft_strtrim.c \
 				String/Manipulation/ft_substr.c \
 				String/Manipulation/get_next_line.c 
