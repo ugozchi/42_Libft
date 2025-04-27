@@ -6,7 +6,7 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 12:43:20 by uzanchi           #+#    #+#             */
-/*   Updated: 2025/04/26 19:39:43 by uzanchi          ###   ########.fr       */
+/*   Updated: 2025/04/27 13:03:16 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,18 @@
 # include <unistd.h>
 # include <errno.h>
 # include <math.h>
+
+/*Structure*/
+
+typedef struct s_parse
+{
+	const char		*s;
+	unsigned long	acc;
+	unsigned long	cutoff;
+	int				cutlim;
+	int				base;
+	int				neg;
+}					t_parse;
 
 /*Define for Ft_Printf*/
 
@@ -158,6 +170,15 @@ int						handle_special_case(const char *nptr, char **endptr,
 							double *result);
 double					ft_strtod(const char *nptr, char **endptr);
 char					*ft_strtok(char *str, const char *delim);
+const char				*parse_base(const char *s, int *base);
+void					compute_cutoff(t_parse *p);
+int						char_to_val(int c);
+int						check_val(int val, int base);
+int						check_overflow(unsigned long acc, int val,
+							unsigned long cutoff, int cutlim);
+const char				*skip_whitespace(const char *s);
+const char				*parse_sign(const char *s, int *neg);
+long int				ft_strtol(const char *nptr, char **endptr, int base);
 char					*ft_strtrim(char const *s1, char const *set);
 char					*ft_substr(char const *s, unsigned int start,
 							size_t len);
