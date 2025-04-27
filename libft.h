@@ -6,7 +6,7 @@
 /*   By: uzanchi <uzanchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 12:43:20 by uzanchi           #+#    #+#             */
-/*   Updated: 2025/04/27 13:03:16 by uzanchi          ###   ########.fr       */
+/*   Updated: 2025/04/27 14:48:57 by uzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ int						ft_isnumeric(char *str);
 int						ft_isprint(int c);
 int						ft_isspace(int c);
 int						ft_isupper(int c);
+bool					is_whitespace(char c, void *context);
 
 /*  Manipulation  */
 int						ft_toupper(int c);
